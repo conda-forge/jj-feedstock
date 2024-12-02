@@ -2,9 +2,11 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
-if [[ ${build_platform} != ${target_platform} ]]; then
-    export OPENSSL_DIR="${PREFIX}"
-fi
+export CARGO_PROFILE_RELEASE_STRIP=symbols
+export CARGO_PROFILE_RELEASE_LTO=fat
+
+export OPENSSL_DIR=${PREFIX}
+export OPENSSL_NO_VENDOR=1
 
 # check licenses
 cargo-bundle-licenses \
@@ -22,6 +24,3 @@ if [[ ${build_platform} == ${target_platform} ]]; then
     mkdir -p ${PREFIX}/share/man/man1
     jj util mangen > ${PREFIX}/share/man/man1/jj.1
 fi
-
-# strip debug symbols
-"$STRIP" "$PREFIX/bin/${PKG_NAME}"
