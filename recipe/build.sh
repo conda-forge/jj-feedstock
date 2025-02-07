@@ -19,8 +19,8 @@ cargo install --no-track --locked --root ${PREFIX} --bin jj --path cli
 if [[ ${build_platform} == ${target_platform} ]]; then
     mkdir -p ${PREFIX}/share/fish/vendor_completions.d
     mkdir -p ${PREFIX}/share/zsh/site-functions
-    jj util completion --zsh > ${PREFIX}/share/zsh/site-functions/_jj
-    jj util completion --fish > ${PREFIX}/share/fish/vendor_completions.d/jj.fish
+    jj util completion zsh > ${PREFIX}/share/zsh/site-functions/_jj
+    jj util completion fish > ${PREFIX}/share/fish/vendor_completions.d/jj.fish
     mkdir -p ${PREFIX}/share/man/man1
-    jj util mangen > ${PREFIX}/share/man/man1/jj.1
+    jj util install-man-pages ${PREFIX}/share/man/man1
 fi
