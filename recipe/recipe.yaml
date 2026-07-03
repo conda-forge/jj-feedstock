@@ -6,7 +6,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/martinvonz/jj/archive/v${{ version }}.tar.gz
+  url: https://github.com/jj-vcs/jj/archive/v${{ version }}.tar.gz
   sha256: 5d230327737ee506b716c6ae5ac824c49951c34e117a024dc7aa38819809ea6c
 
 build:
@@ -33,8 +33,8 @@ about:
     - LICENSE
     - THIRDPARTY.yml
   summary: Git-compatible distributed version control system
-  homepage: https://github.com/martinvonz/jj
-  repository: https://github.com/martinvonz/jj
+  homepage: https://github.com/jj-vcs/jj
+  repository: https://github.com/jj-vcs/jj
 
 extra:
   recipe-maintainers:
