@@ -1,5 +1,5 @@
 context:
-  version: "0.43.0"
+  version: "0.44.0"
 
 package:
   name: jj
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/martinvonz/jj/archive/v${{ version }}.tar.gz
-  sha256: 5d230327737ee506b716c6ae5ac824c49951c34e117a024dc7aa38819809ea6c
+  sha256: cd72ac1040c93d474dcafd8dd7f8d91d7407f9358bc9ffd4a6b72f4017112eab
 
 build:
   number: 0
