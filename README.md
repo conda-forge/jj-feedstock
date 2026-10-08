@@ -3,13 +3,13 @@ About jj-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jj-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/martinvonz/jj
+Home: https://github.com/jj-vcs/jj
 
 Package license: Apache-2.0
 
 Summary: Git-compatible distributed version control system
 
-Development: https://github.com/martinvonz/jj
+Development: https://github.com/jj-vcs/jj
 
 Current build status
 ====================

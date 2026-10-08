@@ -6,11 +6,11 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/martinvonz/jj/archive/v${{ version }}.tar.gz
+  url: https://github.com/jj-vcs/jj/archive/v${{ version }}.tar.gz
   sha256: 6489f79d59dc4f9c11230c51d309dc9c6ec392921772b738546966c494b6d72c
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -18,12 +18,6 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
-    - pkg-config
-  host:
-    - if: win
-      then: libgit2
-    - openssl
-    - zlib
 
 tests:
   - script:
@@ -35,8 +29,8 @@ about:
     - LICENSE
     - THIRDPARTY.yml
   summary: Git-compatible distributed version control system
-  homepage: https://github.com/martinvonz/jj
-  repository: https://github.com/martinvonz/jj
+  homepage: https://github.com/jj-vcs/jj
+  repository: https://github.com/jj-vcs/jj
 
 extra:
   recipe-maintainers:
